@@ -79,10 +79,10 @@ header nav ul li:hover a{
 /* le # réfère à un ID et non pas une classe */
 section#presentation {
    padding-top: 90px;
-   /* float: left; */
+   float: left; /* Garder les floats absolument sinon la mise en page est foutue en l'air lorsqu'on touche la mise en page de la section contact.*/
 }
 
-section#presentation .photo-groupe{
+section#presentation .photo-groupe{ /*l'espace avant le point est vital pour signifier que je vise un sous élément de l'ID #presentation. Sans espace, cela signifie que je selectionne qqch qui a l'ID #presentation ET la classe désignée.*/
     width : 60%;
     float: left;
     padding: 50px;
@@ -112,7 +112,7 @@ section#portfolio {
     background-color: #1f203a;
     padding: 30px;
     padding-top: 90px;
-    /* float: left; */
+    float: left;/* Garder les floats absolument sinon la mise en page est foutue en l'air lorsqu'on touche la mise en page de la section contact.*/
 }
 
 section#portfolio .texte-portfolio{
@@ -148,7 +148,7 @@ section#portfolio .allImages{
 }
 
 section#portfolio .allImages .imageContent {
-    width: 33.3333%;
+    width: 33.3333%; /* permet de répartir le contenu équitablement dans le container*/
     float: left;
     height: 350px;
     padding: 10px;
@@ -161,8 +161,8 @@ section#portfolio .allImages .imageContent img{
 }
 
 section#contact{
-    /* clear: both; */
-    height: 100vh;
+    clear: both; /* Garder les floats absolument sinon la mise en page est foutue en l'air lorsqu'on touche la mise en page de la section contact.*/
+    height: 100vh; /*vh = viewport height = par rapport à la hauteur de l'écran. Utilse en responsive design*/
     padding: 30px;
     padding-top: 90px;
 }
@@ -177,7 +177,7 @@ section#contact span{
     line-height: 1.5;
 }
 
-section#contact > span:first-child{
+section#contact > span:first-child{ /* :first-child = permet de viser */
     font-family: "OpenSansBolder";
     font-size: 3rem;
 }
