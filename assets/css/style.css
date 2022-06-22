@@ -1,0 +1,183 @@
+/*toujours appeler les fonts en début de css. */
+
+@font-face {
+    font-family: "OpenSans"; /* le nom ici sera celui rappelé plus tard pour l'utilisation de la police voulue*/
+    src: url("../fonts/opensans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "OpenSansBolder";
+    src: url("../fonts/opensans/OpenSans-ExtraBold.ttf");
+}
+
+/*  * applique le style à TOUS les éléments de la page. border-box signifie que le madding et la bordure sont inclus dans la largeur et la hauteur.*/
+* {
+    box-sizing: border-box;  
+  }
+
+/* ajouter ensuite les styles qui s'appliqueront le plus généralement*/
+
+html{
+    scroll-behavior: smooth;
+    font-family: "OpenSans";
+    color: rgb(198, 198, 198);
+}
+
+/*On procède ensuite section par secion, de la plus générale à la plus détaillée*/
+
+body{
+    background-color:#333333;
+}
+
+header{
+    width: 100%;
+    height : 90px;
+    padding : 10px 15%;
+    background-color: #1f203a;
+    position: sticky;
+    top: 0px;
+}
+
+header img.logo{
+    height: 100%;
+    float: left;
+}
+
+header nav{
+    float: right;
+    font-size: 1.3rem;
+}
+
+header nav ul{
+    list-style-type: none;
+    float: left;
+}
+
+header nav ul li{
+    float:left;
+    border : 1px solid rgb(198, 198,198);
+    margin-right: 20px;
+}
+
+/* change la couleur du bouton durant le hoover */
+header nav ul li:hover{
+    background-color: rgb(198, 198, 198);
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: rgb(198, 198, 198);
+    padding: 25px;
+    display: block
+}
+
+/* change la couleur du texte durant le hoover */
+header nav ul li:hover a{ 
+    color:#1f203a;
+}
+
+/* le # réfère à un ID et non pas une classe */
+section#presentation {
+   padding-top: 90px;
+   /* float: left; */
+}
+
+section#presentation .photo-groupe{
+    width : 60%;
+    float: left;
+    padding: 50px;
+}
+
+section#presentation .photo-groupe img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+section#presentation .texte{
+    width: 40%;
+    float: left;
+    text-align: center;
+}
+
+section#presentation .texte p{
+    font-size: 1.5rem;
+    letter-spacing: 1.2px;
+    line-height: 2;
+    padding : 50px;
+    padding-top: 70px;
+}
+
+section#portfolio {
+    background-color: #1f203a;
+    padding: 30px;
+    padding-top: 90px;
+    /* float: left; */
+}
+
+section#portfolio .texte-portfolio{
+    width: 70%;
+    margin-left: 15%;
+}
+
+section#portfolio .texte-portfolio h1{
+    font-family: "OpenSansBolder";
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding-top: 30px;
+}
+
+section#portfolio .texte-portfolio h2{
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    margin-top: 30px;
+}
+
+section#portfolio .texte-portfolio p{
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    line-height: 2;
+}
+
+section#portfolio .allImages{
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 30px;
+}
+
+section#portfolio .allImages .imageContent {
+    width: 33.3333%;
+    float: left;
+    height: 350px;
+    padding: 10px;
+}
+
+section#portfolio .allImages .imageContent img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section#contact{
+    /* clear: both; */
+    height: 100vh;
+    padding: 30px;
+    padding-top: 90px;
+}
+
+section#contact span{
+    display: block;
+    width: 85%;
+    margin-left: 15%;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+section#contact > span:first-child{
+    font-family: "OpenSansBolder";
+    font-size: 3rem;
+}
